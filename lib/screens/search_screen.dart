@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:news_app_getx/api/api.dart';
-import 'package:news_app_getx/screens/detail_screen.dart';
+import 'package:news_app_getx/screens/detail.dart';
 import 'package:get/get.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -124,7 +124,6 @@ class _SearchScreenState extends State<SearchScreen> {
         children: [
           Container(
             padding: EdgeInsets.all(16),
-            color: Colors.white,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -147,7 +146,6 @@ class _SearchScreenState extends State<SearchScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
@@ -226,7 +224,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    DetailScreen(newsDetail: item),
+                                    DetailScreen(newsDetail: item, heroTag: 'hero-$index'),
                               ),
                             );
                           },

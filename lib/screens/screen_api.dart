@@ -231,7 +231,7 @@ class _ScreenApiState extends State<ScreenApi> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    SportsNewsScreen(newsDetail: item),
+                                    DetailScreen(newsDetail: item, heroTag: 'hero-$index'),
                               ),
                             );
                           },
@@ -376,7 +376,7 @@ class _ScreenApiState extends State<ScreenApi> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    SportsNewsScreen(newsDetail: item),
+                                    DetailScreen(newsDetail: item, heroTag: 'hero-$index'),
                               ),
                             );
                           },

@@ -1,7 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app_getx/screens/enhanced_home_screen.dart';
+import 'package:news_app_getx/controllers/news_controller.dart';
+import 'package:news_app_getx/screens/home_screen.dart';
 import 'package:news_app_getx/screens/search_screen.dart';
+import 'package:get/get.dart';
 
 
 class MainScreen extends StatefulWidget {
@@ -12,7 +14,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<Widget> screens = [ScreenApi1(), SearchScreen()];
+  List<Widget> screens = [HomeInteractiveScreen(), SearchScreen()];
 
   int selectedIndex = 0;
 
@@ -41,7 +43,6 @@ class _MainScreenState extends State<MainScreen> {
             });
           },
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.white,
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.grey[600],
           elevation: 0,

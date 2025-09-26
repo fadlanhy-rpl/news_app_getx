@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_getx/screens/main_screen.dart';
-
-// import 'package:news_app/screens/screen_api.dart';
-// import 'package:news_app/screens/test.dart';
-
+import 'package:get/get.dart';
+import 'package:news_app_getx/screens/main_screen.dart'; 
 void main() {
   runApp(const MyApp());
 }
@@ -11,16 +8,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      title: 'SkyNews App',
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home:  MainScreen(),
+
+      theme: ThemeData.light(),      // Definisikan tema terang
+      darkTheme: ThemeData.dark(),
+
+      home: const MainScreen(),
     );
   }
 }
