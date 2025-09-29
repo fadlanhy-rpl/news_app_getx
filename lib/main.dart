@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news_app_getx/screens/main_screen.dart'; 
+// import 'package:news_app_getx/screens/main_screen.dart';
+import 'package:news_app_getx/screens/splash/splash_screen.dart'; 
 void main() {
   runApp(const MyApp());
 }
@@ -14,10 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'SkyNews App',
       debugShowCheckedModeBanner: false,
 
-      theme: ThemeData.light(),      // Definisikan tema terang
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light(),      
+      // darkTheme: ThemeData.dark(),
 
-      home: const MainScreen(),
+      home: const SplashScreen(),
     );
   }
 }

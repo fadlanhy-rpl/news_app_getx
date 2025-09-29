@@ -404,7 +404,6 @@ class _HomeInteractiveScreenState extends State<HomeInteractiveScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      // Removed hardcoded backgroundColor to follow theme
       body: SafeArea(
         child: RefreshIndicator(
           color: Colors.blue,
@@ -414,10 +413,8 @@ class _HomeInteractiveScreenState extends State<HomeInteractiveScreen> {
               parent: AlwaysScrollableScrollPhysics(),
             ),
             slivers: [
-              // Modern SliverAppBar with theme support
               SliverAppBar(
                 pinned: true,
-                // Removed hardcoded backgroundColor
                 elevation: 0,
                 title: const Text(
                   'SkyNews',

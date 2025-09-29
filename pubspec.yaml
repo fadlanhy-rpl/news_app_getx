@@ -38,6 +38,7 @@ dependencies:
   http: ^1.5.0
   curved_navigation_bar: ^1.0.6
   get: ^4.7.2
+  lottie: ^3.3.1
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +66,7 @@ flutter:
   assets:
     - assets/
     - assets/image/
+    - assets/lotties/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
